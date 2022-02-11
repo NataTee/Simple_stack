@@ -14,14 +14,16 @@ using std::cout;
 using std::endl;
 
 class Stack {
+
     public:
 
     Stack();    // default constructor
     ~Stack();   //destructor
 
-    void push(int);
+    int push(int);
     int pop();
-    void isEmpty();
+    int peek(int);
+    int isEmpty(int);
 
     protected:
     //private variables
