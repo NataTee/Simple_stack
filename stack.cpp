@@ -26,3 +26,12 @@ int Stack::push(int num) {
 
     return add;
 }
+
+// function to check if stack is empty
+int Stack::isEmpty(int top) {
+    bool empty = false;
+    if(top == -1) {
+        empty = true;
+    }
+    return empty;
+}
