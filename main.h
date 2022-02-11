@@ -5,13 +5,10 @@ Purpose: The assignment to further train to build proper architecture, file
 structures, and loosely coupled architectures.
 ***************************************************************************/
 
-#ifndef COMMANDLINE_MAIN_H
-#define COMMANDLINE_MAIN_H
+#ifndef STACK_MAIN_H
+#define STACK_MAIN_H
 
-#include <iostream>
+#include "time.h"
 #include "stack.h"
 
-using std::cout;
-using std::endl;
-
-#endif //COMMANDLINE_MAIN_H
+#endif //STACK_MAIN_H
