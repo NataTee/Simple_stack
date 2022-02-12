@@ -13,25 +13,25 @@ int main(int argc, char** argv) {
     // Use the time function to get a "seed" value for srand
     srand((unsigned int)time(0));
 
-    for (int i=0; i<=SIZE+2; i++) {
-        try {
-            int num=rand()%1000;
-            myStack.push(num);
-            cout << num << " inserted" << endl;
+    for (int test=0; test<=SIZE+100; test++) {
+        int option = rand()%2;
+        if (option==0) {
+            try {
+                int num=rand()%1000;
+                myStack.push(num);
+                cout << "Number " << num << " inserted." << endl;
+            }
+            catch (const char* msg) {
+                cerr << msg << endl;
+            }
         }
-        catch (const char* msg) {
-            cerr << msg << endl;
-        }
-    }
-
-
-
-    for (int i=0; i<=SIZE+2; i++) {
-        try {
-            cout << myStack.pop() << " removed" << endl;
-        }
-        catch (const char* msg) {
-            cerr << msg << endl;
+        else {
+            try {
+                cout << myStack.pop() << " removed." << endl;
+            }
+            catch (const char* msg) {
+                cerr << msg << endl;
+            }
         }
     }
 
