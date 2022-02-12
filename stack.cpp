@@ -39,6 +39,15 @@ int Stack::pop() {
     }
 }
 
+int Stack::peek() {
+    if (isEmpty(top)) {
+        throw "Stack is empty!";
+    }
+    else {
+      return stack[top];
+    }
+}
+
 // function to check if stack is empty
 int Stack::isEmpty(int top) {
     bool empty = false;
