@@ -11,4 +11,10 @@ structures, and loosely coupled architectures.
 #include "time.h"
 #include "stack.h"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+using std::cerr;
+
 #endif //STACK_MAIN_H
