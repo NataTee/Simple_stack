@@ -7,11 +7,7 @@ structures, and loosely coupled architectures.
 #ifndef STACK_STACK_H
 #define STACK_STACK_H
 
-#include <iostream>
 #define SIZE 10
-
-using std::cout;
-using std::endl;
 
 class Stack {
 
@@ -22,7 +18,7 @@ class Stack {
 
     int push(int);
     int pop();
-    int peek(int);
+    int peek();
     int isEmpty(int);
 
     protected:
