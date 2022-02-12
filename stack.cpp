@@ -19,7 +19,6 @@ int Stack::push(int num) {
 
     if (top < SIZE) {
         stack[++top] = num;
-        cout << "Inserting " << stack[top] << " to the place " << top << endl;
     }
     else {
         throw "Overflow error!";
@@ -32,15 +31,12 @@ int Stack::push(int num) {
 // function to remove data from the top of the stack
 int Stack::pop() {
 
-    bool remove = true;
-
     if (isEmpty(top)) {
         throw "Underflow error!";
-        remove = false;
     }
-    stack[top--];
-
-    return remove;
+    else {
+        return stack[top--];
+    }
 }
 
 // function to check if stack is empty
