@@ -17,11 +17,10 @@ int Stack::push(int num) {
 
     bool add = true;
 
-    if (top < SIZE) {
+    if (top < SIZE-1) {
         stack[++top] = num;
     }
     else {
-        throw "Overflow error!";
         add = false;
     }
 
@@ -31,25 +30,21 @@ int Stack::push(int num) {
 // function to remove data from the top of the stack
 int Stack::pop() {
 
-    if (isEmpty(top)) {
+    if (isEmpty()) {
         throw "Underflow error!";
     }
-    else {
-        return stack[top--];
-    }
+    return stack[top--];
 }
 
 int Stack::peek() {
-    if (isEmpty(top)) {
+    if (isEmpty()) {
         throw "Stack is empty!";
     }
-    else {
-      return stack[top];
-    }
+    return stack[top];
 }
 
 // function to check if stack is empty
-int Stack::isEmpty(int top) {
+int Stack::isEmpty() {
     bool empty = false;
     if(top == -1) {
         empty = true;
