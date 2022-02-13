@@ -13,18 +13,18 @@ class Stack {
 
     public:
 
-    Stack();    // default constructor
-    ~Stack();   //destructor
+      Stack();    // default constructor
+      ~Stack();   //destructor
 
-    int push(int);
-    int pop();
-    int peek();
-    int isEmpty(int);
+      int push(int);
+      int pop();
+      int peek();
+      int isEmpty();
 
-    protected:
-    //private variables
-    int top;
-    int stack[SIZE];
+    private:
+      //private variables
+      int top;
+      int stack[SIZE];
 };
 
 #endif //STACK_STACK_H
